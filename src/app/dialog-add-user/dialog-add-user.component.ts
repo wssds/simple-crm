@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Firestore } from '@angular/fire/firestore';
+
 import { User } from 'src/models/user.class';
 
 @Component({
