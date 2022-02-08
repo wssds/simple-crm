@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Firestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 import { User } from 'src/models/user.class';
 
@@ -13,7 +13,7 @@ export class DialogAddUserComponent implements OnInit {
   user = new User();
   birthDate!: Date;
   
-  constructor(private firestore: Firestore) { }
+  constructor(private firestore: AngularFirestore) { }
 
   ngOnInit(): void {
   }
