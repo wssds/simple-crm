@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 import { User } from 'src/models/user.class';
 
@@ -25,7 +25,7 @@ export class DialogAddUserComponent implements OnInit {
 
     this.firestore
     .collection('users')
-    .add(this.user)
+    .add(this.user.toJSON())
     .then((result: any) => {
       console.log('Adding user finished', result);
 
