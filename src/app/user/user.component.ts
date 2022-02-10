@@ -21,7 +21,7 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     this.firestore
     .collection('users')
-    .valueChanges()
+    .valueChanges({idField: 'customIdName'})
     .subscribe((changes: any) => {
       console.log('Received changes from DB', changes);
       this.allUsers = changes;
@@ -33,3 +33,7 @@ export class UserComponent implements OnInit {
   }
 
 }
+function idField(idField: any, arg1: string) {
+  throw new Error('Function not implemented.');
+}
+
